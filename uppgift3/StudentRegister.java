@@ -1,5 +1,6 @@
 package studentregister;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class StudentRegister {
@@ -10,11 +11,11 @@ public class StudentRegister {
 
         Register register = new Register();
 
-        register.setUmuId("6862");
-        register.setKontakt("462690276");
+        register.setUmuId("lare6862");
+        register.setKontakt("0702690276");
         register.setNamn("Lasse");
 
-        hr.add(register);
+        //hr.add(register);
 
         Scanner input = new Scanner(System.in);
 
@@ -23,63 +24,30 @@ public class StudentRegister {
         do {
             menu();
             option = input.nextInt();
+            input.nextLine();
 
             switch (option) {
 
                 case 1:
 
-                    System.out.print(
-                            "Vad är studentens UmuId? ");
-
-                    String umuId = input.nextLine();
-
-                    System.out.print(
-                            "Vad är studentens kontaktuppgifter? Börja med 46 istället för 070: ");
-
-                    String kontakt = input.nextLine();
-
-                    System.out.print(
-                            "Vad är studentens namn? ");
-
-                    String namn = input.nextLine();
-
-                    register = new Register(namn, umuId, kontakt);
-                    hr.add(register);
-                    System.out.println(register.toString());
+                    hr.add();
 
                     break;
 
                 case 2:
 
-                    System.out.print(
-                            "Vad är studentens UmuId? ");
-                    String rId = input.nextLine();
-
-                    hr.delete(rId);
+                    hr.delete();
 
                     break;
 
                 case 3:
 
-                    System.out.print(
-                            "Vad är studentens UmuId? ");
-
-                    String rIdNo = input.nextLine();
-                    hr.update(rIdNo, input);
-
+                    hr.update();
                     break;
 
                 case 4:
 
-                    System.out.print(
-                            "Vad är studentens UmuId? ");
-                    String bookId = input.nextLine();
-
-                    if (!hr.find(bookId)) {
-                        System.out.println(
-                                "UmuId finns inte i registret\n");
-                    }
-
+                    hr.find();
                     break;
 
                 case 5:
@@ -89,7 +57,7 @@ public class StudentRegister {
                 case 9:
 
                     System.out.println(
-                            "\nTack!\n");
+                            "\nTack! Nu är filen sparad.\n");
                     System.exit(0);
 
                     break;
