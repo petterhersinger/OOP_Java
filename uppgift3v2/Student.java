@@ -13,6 +13,10 @@ public class Student {
         this.kontakt = kontakt;
     }
 
+    public Student() {
+
+    }
+
     public String getKontakt() {
         return kontakt;
     }

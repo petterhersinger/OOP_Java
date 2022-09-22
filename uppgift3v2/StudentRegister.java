@@ -8,10 +8,6 @@ public class StudentRegister {
         StudentHantering sh = new StudentHantering();
         Student s = new Student();
 
-        s.setUmuId("lass2345");
-        s.setKontakt("0702705456");
-        s.setNamn("lasse");
-
         Scanner input = new Scanner(System.in);
 
         int option = 0;
@@ -43,7 +39,6 @@ public class StudentRegister {
                     break;
 
                 case 5:
-
                     sh.skrivTillFil();
                     System.out.println("Sparat och klart!");
 
