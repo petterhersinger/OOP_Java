@@ -41,6 +41,7 @@ public class StudentRegister {
                 case 5:
                     sh.skrivTillFil();
                     System.out.println("Sparat och klart!");
+                    break;
 
                 default:
                     System.out.println("Något kraschade..");
